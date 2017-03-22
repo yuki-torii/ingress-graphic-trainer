@@ -4261,6 +4261,10 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "http://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
+typescript@^2.2.1:
+  version "2.2.1"
+  resolved "http://registry.npm.taobao.org/typescript/download/typescript-2.2.1.tgz#4862b662b988a4c8ff691cc7969622d24db76ae9"
+
 uglify-js@2.8.x, uglify-js@^2.7.5:
   version "2.8.13"
   resolved "http://registry.npm.taobao.org/uglify-js/download/uglify-js-2.8.13.tgz#d0cdf02f3c661484fac601b7e723207b735a374c"

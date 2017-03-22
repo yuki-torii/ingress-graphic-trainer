@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es6",
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "inlineSourceMap": true,
+    "outDir": ".tmp",
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "noUnusedParameters": true,
+    "noUnusedLocals": true
+  },
+  "exclude": [
+    "node_modules",
+    "tools/build",
+    "dist"
+  ],
+  "compileOnSave": false
+}

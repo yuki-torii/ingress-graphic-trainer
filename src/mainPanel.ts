@@ -1,13 +1,13 @@
 import app from './app'
 import { Sprite, Text } from 'pixi.js';
-import ingressPng from './ingress.png'
+import image from './image'
 
 var text = new Text('主面板')
 text.x = 280
 text.y = 100
 app.stage.addChild(text)
 
-var sprite = Sprite.fromImage(ingressPng)
+var sprite = Sprite.fromImage(image.ingressPng)
 sprite.anchor.set(0.5)
 sprite.width = 100
 sprite.height = 100
@@ -25,3 +25,8 @@ app.stage.addChild(sprite)
 app.ticker.add(function (delta) {
   sprite.rotation += 0.05 * delta
 })
+
+export default {
+  show () {},
+  hide () {}
+}
