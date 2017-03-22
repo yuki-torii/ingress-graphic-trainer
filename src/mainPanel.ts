@@ -1,5 +1,5 @@
 import app from './app'
-import { Sprite, Text } from 'pixi.js';
+import { Sprite, Text } from 'pixi.js'
 import image from './image'
 
 var text = new Text('主面板')
@@ -20,13 +20,15 @@ sprite.on('pointerdown', () => {
   console.log('test')
 })
 
-app.stage.addChild(sprite)
-
 app.ticker.add(function (delta) {
   sprite.rotation += 0.05 * delta
 })
 
 export default {
-  show () {},
-  hide () {}
+  show () {
+    app.stage.addChild(sprite)
+  },
+  hide () {
+    app.stage.removeChild(sprite)
+  }
 }

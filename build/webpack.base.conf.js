@@ -28,7 +28,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
+        test: /\.(js|vue|ts)$/,
         loader: 'eslint-loader',
         enforce: "pre",
         include: [resolve('src'), resolve('test')],
@@ -48,7 +48,7 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        loader: 'ts-loader',
+        loader: 'babel-loader!ts-loader',
         include: [resolve('src')]
       },
       {
