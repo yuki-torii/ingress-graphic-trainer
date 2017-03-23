@@ -1,6 +1,7 @@
 import app from './app'
 import { Sprite, Text } from 'pixi.js'
 import image from './image'
+import gamePanel from './gamePanel'
 
 var text = new Text('主面板')
 text.x = 280
@@ -16,7 +17,8 @@ sprite.y = app.renderer.height / 2
 sprite.interactive = true
 sprite.buttonMode = true
 sprite.on('pointerdown', () => {
-  console.log('test')
+  app.stage.removeChildren()
+  gamePanel.show()
 })
 
 app.ticker.add(function (delta) {
@@ -26,8 +28,5 @@ app.ticker.add(function (delta) {
 export default {
   show () {
     app.stage.addChild(text, sprite)
-  },
-  hide () {
-    app.stage.removeChild(sprite)
   }
 }
