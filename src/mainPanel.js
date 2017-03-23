@@ -5,7 +5,6 @@ import image from './image'
 var text = new Text('主面板')
 text.x = 280
 text.y = 100
-app.stage.addChild(text)
 
 var sprite = Sprite.fromImage(image.ingressPng)
 sprite.anchor.set(0.5)
@@ -26,7 +25,7 @@ app.ticker.add(function (delta) {
 
 export default {
   show () {
-    app.stage.addChild(sprite)
+    app.stage.addChild(text, sprite)
   },
   hide () {
     app.stage.removeChild(sprite)
