@@ -16,8 +16,9 @@ sprite.y = app.renderer.height / 2
 
 sprite.interactive = true
 sprite.buttonMode = true
+
 sprite.on('pointerdown', () => {
-  app.stage.removeChildren()
+  hide()
   gamePanel.show()
 })
 
@@ -25,8 +26,14 @@ app.ticker.add(function (delta) {
   sprite.rotation += 0.05 * delta
 })
 
+function show () {
+  app.stage.addChild(text, sprite)
+}
+
+function hide () {
+  app.stage.removeChildren()
+}
+
 export default {
-  show () {
-    app.stage.addChild(text, sprite)
-  }
+  show
 }
